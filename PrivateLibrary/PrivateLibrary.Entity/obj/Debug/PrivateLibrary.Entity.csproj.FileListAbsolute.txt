@@ -1,0 +1,5 @@
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Entity\bin\Debug\EpamTask.PrivateLibrary.Entity.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Entity\bin\Debug\EpamTask.PrivateLibrary.Entity.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Entity\obj\Debug\EpamTask.PrivateLibrary.Entity.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Entity\obj\Debug\EpamTask.PrivateLibrary.Entity.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Entity\obj\Debug\PrivateLibrary.Entity.csprojResolveAssemblyReference.cache

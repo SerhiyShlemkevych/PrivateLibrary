@@ -1,0 +1,30 @@
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary.Presenter.csprojResolveAssemblyReference.cache
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\Forms\LoginForm.g.cs
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\MainWindow.g.cs
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\Forms\RenewConfirmationWindow.g.cs
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\Forms\SignUpForm.g.cs
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\App.g.cs
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\Forms\LoginForm.baml
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\MainWindow.baml
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\Forms\RenewConfirmationWindow.baml
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\Forms\SignUpForm.baml
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary.Presenter.csproj.GenerateResource.Cache
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.exe.config
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.exe
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.Parser.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.Parser.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\EpamTask.PrivateLibrary_MarkupCompile.cache
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\EpamTask.PrivateLibrary_MarkupCompile.lref
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\EpamTask.PrivateLibrary.g.resources
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\EpamTask.PrivateLibrary.Properties.Resources.resources
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\EpamTask.PrivateLibrary.exe
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\EpamTask.PrivateLibrary.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.Entity.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.Repositories.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.Entity.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.Repositories.pdb
+E:\Imp\Git\PrivateLibrary\PrivateLibrary\PrivateLibrary\bin\Debug\EpamTask.PrivateLibrary.exe.config
+E:\Imp\Git\PrivateLibrary\PrivateLibrary\PrivateLibrary\obj\Debug\EpamTask.PrivateLibrary.exe
+E:\Imp\Git\PrivateLibrary\PrivateLibrary\PrivateLibrary\obj\Debug\EpamTask.PrivateLibrary.pdb

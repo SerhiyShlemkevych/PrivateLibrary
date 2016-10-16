@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EpamTask.PrivateLibrary.Entity.BaseEntity">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.Entity.Book.BookEntity">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.Entity.Book.BookLocationEntity">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.Entity.Member.MemberEntity">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.Entity.Member.MembershipEntity">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.Entity.Models.BorrowModel">
+    <Position X="4.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.Entity.User.UserEntity">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

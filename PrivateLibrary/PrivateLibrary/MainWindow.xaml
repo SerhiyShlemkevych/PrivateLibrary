@@ -1,0 +1,253 @@
+﻿<Window x:Class="EpamTask.PrivateLibrary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:inputValidation="clr-namespace:EpamTask.PrivateLibrary.InputValidation"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="Private Library" Height="813.5" Width="1232.5" Loaded="Window_Loaded">
+    
+    <Window.Resources>
+        <ControlTemplate x:Key="ValidationErrorTemplate">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Bottom"
+                        Foreground="Red" FontWeight="12" 
+                        Text="{Binding ElementName=ErrorAdorner, 
+                        Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                </TextBlock>
+                <AdornedElementPlaceholder  x:Name="ErrorAdorner"/>
+            </DockPanel>
+        </ControlTemplate>
+    </Window.Resources>
+
+    <Grid Name="gridMainWindow">
+        <DataGrid x:Name="dataGridMain" HorizontalAlignment="Left" ColumnWidth="*" VerticalAlignment="Top" Margin="10,48,0,0" Width="1209" Height="451" IsReadOnly="True" SelectionChanged="dataGridMain_SelectionChanged"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="240" Margin="10,504,0,0" VerticalAlignment="Top" Width="134">
+            <Grid x:Name="gridTableSelect" Margin="-1,1,0,-1" IsEnabled="True">
+                <Button x:Name="btnBookList" Content="Book List" HorizontalAlignment="Center" Margin="10,10,9,0" VerticalAlignment="Top" Width="114" Height="28" Click="btnBookList_Click" RenderTransformOrigin="0.763,0.679"/>
+                <Button x:Name="btnMemberList" Content="Member List" HorizontalAlignment="Center" Margin="9,43,10,0" VerticalAlignment="Top" Width="114" Height="28" Click="btnMemberList_Click"/>
+                <Button x:Name="btnRental" Content="Borrowed Books" HorizontalAlignment="Center" Margin="9,76,10,0" VerticalAlignment="Top" Width="114" Height="28" Click="btnRental_Click"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="239" Margin="149,505,0,0" VerticalAlignment="Top" Width="1070">
+            <Grid x:Name="gridTableForm" IsEnabled="True">
+                <Border BorderBrush="Black" BorderThickness="1" Visibility="Visible" HorizontalAlignment="Left" Height="209" Margin="20,10,0,0" VerticalAlignment="Top" Width="886">
+                    <Grid x:Name="gridForms" Visibility="Visible" Margin="-1,-1,-141,-1" HorizontalAlignment="Left" Width="1026">
+
+
+                        <Grid x:Name="gridBook" Visibility="Collapsed" Margin="1,0,-1,0" KeyDown="gridBook_KeyDown">
+                            <TextBox x:Name="txtBookID"          HorizontalAlignment="Left"     Height="25" Margin="24,36,0,0"   TextWrapping="Wrap"    Text="{Binding Path=ID}" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
+                            
+                            <TextBox x:Name="txtBookName" HorizontalAlignment="Left"     Height="25" Margin="224,36,0,0"  TextWrapping="Wrap"    VerticalAlignment="Top" Width="150" 
+                                     Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="Name" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:StringValidator AllowStartWithNumber="True" ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+
+                            <TextBox x:Name="txtBookAuthor"      HorizontalAlignment="Left"     Height="25" Margin="424,36,0,0"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="150"
+                                     Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="Author" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:StringValidator ValidatesOnTargetUpdated="True" />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+                            
+                            <TextBox x:Name="txtBookGendre"      HorizontalAlignment="Left"     Height="25" Margin="624,36,0,0"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" 
+                            Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="Gendre" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:StringValidator ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+
+                            <TextBox x:Name="txtBookYear"        HorizontalAlignment="Left"     Height="25" Margin="24,106,0,0"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" 
+                            Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="Year" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:YearValidator ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+
+                            <TextBox x:Name="txtBookISBN"        HorizontalAlignment="Left"     Height="25" Margin="224,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"
+                            Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="ISBN" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:ISBNValidator ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+                            <TextBox x:Name="txtBookAmount"      HorizontalAlignment="Left"     Height="25" Margin="424,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"
+                            Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="Amount" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:IntegerValidator PositiveOnly="True" ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+                            <ComboBox x:Name="comboBoxBookFloor" Visibility="Visible" HorizontalAlignment="Left" Margin="625,106,0,0" VerticalAlignment="Top"   SelectedItem="{Binding Path=Floor}" Width="150" Height="25" SelectedIndex="0" SelectionChanged="comboBoxBookFloor_SelectionChanged" />
+                            <ComboBox x:Name="comboBoxBookShelf" Visibility="Visible" HorizontalAlignment="Left" Margin="24,172,0,0" VerticalAlignment="Top"    SelectedItem="{Binding Path=Shelf}" Width="150" Height="25" SelectedIndex="0"/>
+
+                            <Label x:Name="lblBookID"     Content="Book ID"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,10,0,0"/>
+                            <Label x:Name="lblBookName"   Content="Title"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="224,10,0,0" RenderTransformOrigin="0.776,0.538"/>
+                            <Label x:Name="lblBookAuthor" Content="Author"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="424,10,0,0"/>
+                            <Label x:Name="lblBookGendre" Content="Gendre"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="624,10,0,0"/>
+                            <Label x:Name="lblBookYear"   Content="Year"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,80,0,0"/>
+                            <Label x:Name="lblBookISBN"   Content="ISBN"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="224,80,0,0"/>
+                            <Label x:Name="lblBookAmount" Content="Amount"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="424,80,0,0"/>
+                            <Label x:Name="lblBookFloor"  Content="Floor"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="625,80,0,0"/>
+                            <Label x:Name="lblBookShelf"  Content="Shelf"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,146,0,0"/>
+
+                            <Button x:Name="btnClearBook" Content="Clear" HorizontalAlignment="Left" Margin="781,172,0,0" VerticalAlignment="Top" Width="93" Height="23" Click="btnClearBook_Click"/>
+                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="209" VerticalAlignment="Top" Width="114" Margin="910,0,0,0">
+                                <Grid x:Name="gridBookAction" Margin="-1" Height="209" VerticalAlignment="Top">
+                                    <Button x:Name="btnBookRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="btnBookRefresh_Click"/>
+                                    <Button x:Name="btnBookEdit" Content="Edit" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" ToolTip="Hotkey: Enter"  Width="94" Height="28" Click="btnBookEdit_Click"/>
+                                    <Button x:Name="btnBookAdd" Content="Add" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top"   ToolTip="Hotkey: Shift+Enter"   Width="94" Height="28" Click="btnBookAdd_Click"/>
+                                    <Button x:Name="btnBookDelete" Content="Delete current" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top"   Width="94" Height="28" Click="btnBookDelete_Click"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+
+
+                        <Grid x:Name="gridMember" Visibility="Collapsed" Margin="1,0,-1,0" KeyDown="gridMember_KeyDown">
+                            <TextBox x:Name="txtMemberID"                   HorizontalAlignment="Left"     Height="25" Margin="24,36,0,0"   TextWrapping="Wrap"    Text="{Binding Path=ID}"                 VerticalAlignment="Top" Width="150" IsEnabled="False"/>
+                            <TextBox x:Name="txtMemberFirstName"            HorizontalAlignment="Left"     Height="25" Margin="224,36,0,0"  TextWrapping="Wrap"    VerticalAlignment="Top" Width="150"  
+                                     Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="FirstName" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:StringValidator ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+                            <TextBox x:Name="txtMemberLastName"  HorizontalAlignment="Left"     Height="25" Margin="424,36,0,0"  TextWrapping="Wrap"    VerticalAlignment="Top" Width="150" 
+                                     Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="LastName" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:StringValidator ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+
+                            <TextBox x:Name="txtMemberEmail" HorizontalAlignment="Left"     Height="25" Margin="624,36,0,0"  TextWrapping="Wrap"   VerticalAlignment="Top" Width="150"  
+                                     Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="Email" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:EmailValidator ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+                            <TextBox x:Name="txtMemberPhoneNumber" HorizontalAlignment="Left"     Height="25" Margin="24,106,0,0"  TextWrapping="Wrap"    VerticalAlignment="Top" Width="150" 
+                                     Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="PhoneNumber" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:PhoneValidator ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+
+                            <ComboBox x:Name="comboBoxMemberGender" HorizontalAlignment="Left" Height="25" Margin="224,106,0,0"   IsSynchronizedWithCurrentItem="True"  SelectedItem="{Binding Path=Gender}" VerticalAlignment="Top" Width="150" SelectionChanged="comboBoxMemberGender_SelectionChanged"/>
+                            
+                                <TextBox x:Name="txtMemberCity" HorizontalAlignment="Left" Height="25" Margin="424,106,0,0" TextWrapping="Wrap"    VerticalAlignment="Top" Width="150" 
+                                     Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="City" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:StringValidator ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+                            <TextBox x:Name="txtMemberJoinDate"             HorizontalAlignment="Left"     Height="25" Margin="624,106,0,0" TextWrapping="Wrap"    Text="{Binding Path=JoinDate}"           VerticalAlignment="Top" Width="150" IsEnabled="False"/>
+                            <TextBox x:Name="txtMemberSubscriptionStart"    HorizontalAlignment="Left"     Height="25" Margin="24,172,0,0"  TextWrapping="Wrap"    Text="{Binding Path=SubscriptionStartDate}"  VerticalAlignment="Top" Width="150" IsEnabled="False"/>
+                            <ComboBox x:Name="comboBoxMembershipName"       HorizontalAlignment="Left"     Height="25" Margin="224,172,0,0" SelectedItem="{Binding Path=MembershipName}"      VerticalAlignment="Top" Width="150" IsEnabled="False"/>
+
+                            <Label x:Name="lblMemberID"             Content="Member ID"             HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,10,0,0"/>
+                            <Label x:Name="lblMemberFirstName"      Content="First Name"            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="224,10,0,0"/>
+                            <Label x:Name="lblMemberLastName"       Content="Last Name"             HorizontalAlignment="Left" VerticalAlignment="Top" Margin="424,10,0,0"/>
+                            <Label x:Name="lblMemberEmail"          Content="Email"                 HorizontalAlignment="Left" VerticalAlignment="Top" Margin="624,10,0,0"/>
+                            <Label x:Name="lblMemberPhoneNumber"    Content="Phone Number"          HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,80,0,0"/>
+                            <Label x:Name="lblMemberGender"         Content="Gender"                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="224,80,0,0"/>
+                            <Label x:Name="lblMemberCity"           Content="City"                  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="424,80,0,0"/>
+                            <Label x:Name="lblMemberJoinDate"       Content="Join Date"             HorizontalAlignment="Left" VerticalAlignment="Top" Margin="625,80,0,0"/>
+                            <Label x:Name="lblMemberStartDate"      Content="Subscription Start"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,146,0,0"/>
+                            <Label x:Name="lblMemberShipName"       Content="Subscription Type"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="224,146,0,0"/>
+                            
+
+
+                            <Button x:Name="btnClearMember" Content="Clear" HorizontalAlignment="Left" Margin="781,172,0,0" VerticalAlignment="Top" Width="93" Height="23" Click="btnClearMember_Click"/>
+                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="209" VerticalAlignment="Top" Width="114" Margin="910,0,0,0">
+                                <Grid x:Name="gridMemberAction" Margin="-1" Height="209" VerticalAlignment="Top">
+                                    <Button x:Name="btnMemberRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="btnMemberRefresh_Click"/>
+                                    <Button x:Name="btnMemberEdit" Content="Edit" ToolTip="Hotkey: Enter" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="btnMemberEdit_Click"/>
+                                    <Button x:Name="btnMemberAdd" Content="Add" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="btnSignup_Click"/>
+                                    <Button x:Name="btnMemberRenew" Content="Renew" ToolTip="Hotkey: Shift+Enter" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="btnMemberRenew_Click"/>
+                                    <Button x:Name="btnMemberDelete" Content="Delete current" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="btnMemberDelete_Click"/>
+                                </Grid>
+                            </Border>
+
+                        </Grid>
+
+
+                        <Grid x:Name="gridBorrow" Visibility="Collapsed" Margin="1,0,-1,0" KeyDown="gridBorrow_KeyDown">
+                            <TextBox x:Name="txtBorrowMemberID"  HorizontalAlignment="Left" Height="25" Margin="24,36,0,0"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" TextChanged="txtBorrowMemberID_TextChanged"
+                                     Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="MemberID" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:IntegerValidator PositiveOnly="True" ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+                            <TextBox x:Name="txtBorrowBookID"   HorizontalAlignment="Left"  Height="25" Margin="224,36,0,0"   TextWrapping="Wrap"   VerticalAlignment="Top" Width="150" TextChanged="txtBorrowBookID_TextChanged"
+                                    Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                                <Binding Path="BookID" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <inputValidation:IntegerValidator PositiveOnly="True" ValidatesOnTargetUpdated="True"/>
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox>
+                            <Label x:Name="lblBorrowBookID"         Content="Member ID"             HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,10,0,0"/>
+                            <Label x:Name="lblBorrowMemberID"       Content="Book ID"            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="224,10,0,0" RenderTransformOrigin="0.776,0.538"/>
+                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="209" VerticalAlignment="Top" Width="114" Margin="910,0,0,0">
+                                <Grid x:Name="gridBorrowAction" Margin="-1" Height="209" VerticalAlignment="Top">
+                                    <Button x:Name="btnBorrowRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="btnBorrowRefresh_Click"/>
+                                    <Button x:Name="btnBorrowLend" Content="Lend" ToolTip="hotkey: Enter" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="btnBorrowLend_Click"/>
+                                    <Button x:Name="btnBorrowReturn" Content="Return" ToolTip="hotkey: Shift+Enter" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="btnBorrowReturn_Click"/>
+                                </Grid>
+                            </Border>
+                            <Label x:Name="lblMemberSummary" Content="Member summary:" HorizontalAlignment="Left" Margin="24,84,0,0" VerticalAlignment="Top"/>
+                            <Label x:Name="lblBookSummary" Content="Book summary:" HorizontalAlignment="Left" Margin="24,144,0,0" VerticalAlignment="Top"/>
+                            <TextBlock x:Name="tblockMemberSummary" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="50" Width="708" Background="#FFDED9D9" Margin="141,88,0,0"/>
+                            <TextBlock x:Name="tblockBookSummary" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="50" Width="708" Background="#FFDED9D9" Margin="141,148,0,0" />
+
+
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <ComboBox x:Name="comboBoxCategory" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="161" Height="26" SelectedIndex="0"/>
+        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="26" Margin="176,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" KeyDown="txtSearch_KeyDown" />
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="631,10,0,0" VerticalAlignment="Top" Width="105" Height="26" Click="btnSearch_Click"/>
+        <Button x:Name="btnSignup" Content="Sign-up" HorizontalAlignment="Left" Margin="805,10,0,0" VerticalAlignment="Top" Width="133" Height="26" Click="btnSignup_Click"/>
+        <Button x:Name="btnRefreshAll" Content="Refresh All" HorizontalAlignment="Left" Margin="943,10,0,0" VerticalAlignment="Top" Width="133" Height="26" Click="btnRefreshAll_Click"/>
+        <Button x:Name="btnConnect" Content="Connect to DB" HorizontalAlignment="Left" Margin="1081,10,0,0" VerticalAlignment="Top" Width="133" Height="26" Click="btnConnect_Click"/>
+        <Label x:Name="lblStatus" Content="Welcome!" HorizontalAlignment="Left" Margin="10,744,0,0" VerticalAlignment="Top" Width="1204" Foreground="Gray" FontSize="14.667"/>
+        
+
+
+    </Grid>
+
+</Window>
+
+    
+    
+    
+    
+    
+    
+    

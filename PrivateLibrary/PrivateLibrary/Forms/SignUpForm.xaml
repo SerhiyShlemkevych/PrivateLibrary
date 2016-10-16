@@ -1,0 +1,106 @@
+﻿<Window x:Class="EpamTask.PrivateLibrary.SignUpForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:inputValidation="clr-namespace:EpamTask.PrivateLibrary.InputValidation"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="Members: Sign up for membership" Height="421.34" Width="827.812">
+    <Window.Resources>
+        <ControlTemplate x:Key="ValidationErrorTemplate">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top"
+                        Foreground="Red" FontSize="11"
+                        Text="{Binding ElementName=ErrorAdorner, 
+                        Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                </TextBlock>
+                <AdornedElementPlaceholder  x:Name="ErrorAdorner"/>
+            </DockPanel>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="366" Margin="10,10,0,0" VerticalAlignment="Top" Width="279">
+            <Grid x:Name="gridSignUp" Visibility="Visible" Margin="-1">
+                <TextBox x:Name="txtMemberFirstName"            HorizontalAlignment="Left"     Height="25" Margin="119,21,0,0"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="150"  
+                         Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                    <Binding Path="FirstName" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <inputValidation:StringValidator ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox>
+                <TextBox x:Name="txtMemberLastName"             HorizontalAlignment="Left"     Height="25" Margin="119,61,0,0"  TextWrapping="Wrap"    VerticalAlignment="Top" Width="150"  
+                         Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                    <Binding Path="LastName" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <inputValidation:StringValidator ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox>
+                <TextBox x:Name="txtMemberEmail"                HorizontalAlignment="Left"     Height="25" Margin="119,100,0,0"  TextWrapping="Wrap"   VerticalAlignment="Top" Width="150" 
+                         Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                    <Binding Path="Email" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <inputValidation:EmailValidator ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox>
+                <TextBox x:Name="txtMemberPhoneNumber"          HorizontalAlignment="Left"     Height="25" Margin="119,140,0,0"  TextWrapping="Wrap"   VerticalAlignment="Top" Width="150"  
+                         Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                    <Binding Path="PhoneNumber" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <inputValidation:PhoneValidator ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox>
+                <TextBox x:Name="txtMemberCity"                 HorizontalAlignment="Left"     Height="25" Margin="119,180,0,0" TextWrapping="Wrap"    VerticalAlignment="Top" Width="150" 
+                         Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}">
+                    <Binding Path="City" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <inputValidation:StringValidator ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox>
+                <ComboBox x:Name="comboBoxMemberGender"         HorizontalAlignment="Left"     Height="25" Margin="119,221,0,0"  SelectedIndex="0"   Text="{Binding Path=Gender}" VerticalAlignment="Top" Width="150"/>
+                <ComboBox x:Name="comboBoxMembershipName"       HorizontalAlignment="Left"     Height="25" Margin="119,261,0,0"  SelectedIndex="0"   Text="{Binding Path=MembershipName}" VerticalAlignment="Top" Width="150"/>
+                <Label x:Name="lblMemberFirstName"      Content="First Name"            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,20,0,0" RenderTransformOrigin="0.776,0.538"/>
+                <Label x:Name="lblMemberLastName"       Content="Last Name"             HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,0,0"/>
+                <Label x:Name="lblMemberEmail"          Content="Email"                 HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,100,0,0"/>
+                <Label x:Name="lblMemberPhoneNumber"    Content="Phone Number"          HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,140,0,0"/>
+                <Label x:Name="lblMemberGender"         Content="Gender"                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,220,0,0"/>
+                <Label x:Name="lblMemberCity"           Content="City"                  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,180,0,0"/>
+                <Label x:Name="lblMemberShipName"       Content="Subscription Type"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,260,0,0"/>
+                <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="191,332,0,0" VerticalAlignment="Top" Width="78" Height="24" Click="btnSubmit_Click"/>
+                <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="10,332,0,0" VerticalAlignment="Top" Width="78" Height="24" Click="btnCancel_Click"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="365" Margin="294,10,0,0" VerticalAlignment="Top" Width="512">
+            <Grid Margin="0,0,0,-1" Name="gridMembershipDetails">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="35" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="1" Grid.Column="0" Content="Book limit:"           HorizontalContentAlignment="Right" HorizontalAlignment="Right"  VerticalAlignment="Center" Height="28" Width="126" />
+                <Label Grid.Row="2" Grid.Column="0" Content="Subscription duration:" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Center" Height="28" Width="126" />
+                <Label Grid.Row="3" Grid.Column="0" Content="Price per month:"      HorizontalContentAlignment="Right" HorizontalAlignment="Right"  VerticalAlignment="Center" Height="28" Width="126" />
+                <Label Grid.Row="4" Grid.Column="0" Content="Total price:"          HorizontalContentAlignment="Right" HorizontalAlignment="Right"  VerticalAlignment="Center" Height="28" Width="126" />
+                <Label Grid.Row="5" Grid.Column="0" Content="Overdue day limit:"    HorizontalContentAlignment="Right" HorizontalAlignment="Right"  VerticalAlignment="Center" Height="28" Width="126" />
+                <Label Grid.Row="6" Grid.Column="0" Content="Overdue fee:"          HorizontalContentAlignment="Right" HorizontalAlignment="Right"  VerticalAlignment="Center" Height="28" Width="126" />
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

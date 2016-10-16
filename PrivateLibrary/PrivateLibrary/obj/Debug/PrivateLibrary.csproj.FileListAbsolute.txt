@@ -1,0 +1,14 @@
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\PrivateLibrary.exe.config
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\PrivateLibrary.exe
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\bin\Debug\PrivateLibrary.pdb
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary.csprojResolveAssemblyReference.cache
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\MainWindow.g.cs
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\App.g.cs
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary_MarkupCompile.cache
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary_MarkupCompile.lref
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\MainWindow.baml
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary.g.resources
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary.Properties.Resources.resources
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary.csproj.GenerateResource.Cache
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary.exe
+c:\users\jhunter\documents\visual studio 2015\Projects\PrivateLibrary\PrivateLibrary\obj\Debug\PrivateLibrary.pdb

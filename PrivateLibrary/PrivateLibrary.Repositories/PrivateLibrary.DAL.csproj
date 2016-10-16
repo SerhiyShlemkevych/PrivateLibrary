@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37974E6B-E5D3-463D-AC29-D3DE35E07328}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EpamTask.PrivateLibrary.Repositories</RootNamespace>
+    <AssemblyName>EpamTask.PrivateLibrary.Repositories</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\Repositories\IBookLocationRepository.cs" />
+    <Compile Include="Abstract\Repositories\IBorrowRepository.cs" />
+    <Compile Include="Abstract\Repositories\IBookRepository.cs" />
+    <Compile Include="Abstract\Repositories\IGenericRepository.cs" />
+    <Compile Include="Abstract\Repositories\IMemberRepository.cs" />
+    <Compile Include="Abstract\Repositories\IMembershipRepository.cs" />
+    <Compile Include="Abstract\Repositories\IUserRepository.cs" />
+    <Compile Include="Abstract\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Concrete\Repositories\BorrowRepository.cs" />
+    <Compile Include="Concrete\Repositories\UserRepository.cs" />
+    <Compile Include="Concrete\Repositories\MembershipRepository.cs" />
+    <Compile Include="Concrete\Repositories\MemberRepository.cs" />
+    <Compile Include="Concrete\Repositories\BookLocationRepository.cs" />
+    <Compile Include="Concrete\Repositories\BookRepository.cs" />
+    <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="Concrete\UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlWrapper\EntityParameters\BorrowParameters.cs" />
+    <Compile Include="SqlWrapper\ExtensionMethod.cs" />
+    <Compile Include="SqlWrapper\SqlCommandWrapper.cs" />
+    <Compile Include="SqlWrapper\EntityParameters\BookLocationParameters.cs" />
+    <Compile Include="SqlWrapper\EntityParameters\MemberShipParameters.cs" />
+    <Compile Include="SqlWrapper\EntityParameters\MemberParameters.cs" />
+    <Compile Include="SqlWrapper\EntityParameters\BookParameters.cs" />
+    <Compile Include="SqlWrapper\StoredPocedureParametersName\StoredProceduresName.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrivateLibrary.Entity\PrivateLibrary.Entity.csproj">
+      <Project>{c06f0f5f-6b73-4d97-a016-f9fb80e0680a}</Project>
+      <Name>PrivateLibrary.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

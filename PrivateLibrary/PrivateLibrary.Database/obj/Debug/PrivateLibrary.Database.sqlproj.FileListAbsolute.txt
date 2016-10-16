@@ -1,0 +1,9 @@
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\bin\Debug\PrivateLibrary.Database.dacpac
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\bin\Debug\PrivateLibrary.Database.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\bin\Debug\PrivateLibrary.Database.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\obj\Debug\PrivateLibrary.Database.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\obj\Debug\PrivateLibrary.Database.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\obj\Debug\Model.xml
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\obj\Debug\refactor.xml
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\obj\Debug\postdeploy.sql
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\obj\Debug\predeploy.sql

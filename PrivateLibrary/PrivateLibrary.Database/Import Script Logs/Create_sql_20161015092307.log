@@ -1,0 +1,13 @@
+16.10.2016 0:23:07	This log contains information about the import operation of the script 'Create.sql' into project 'PrivateLibrary.Database' on computer 'JHUNTER-PC' by user'JHunter.
+16.10.2016 0:23:07	Started importing file: C:\Users\JHunter\Documents\SQL Server Management Studio\Release\Create.sql 
+16.10.2016 0:23:07	File name C:\Users\JHunter\Documents\SQL Server Management Studio\Release\Create.sql (size: 4396)
+16.10.2016 0:23:07	Parsing import script
+16.10.2016 0:23:07	Total number of batches in script: 12
+16.10.2016 0:23:07	Total number of statements in script: 11
+16.10.2016 0:23:07	The script was successfully imported into the project.
+16.10.2016 0:23:07	Analyzing schema objects...
+16.10.2016 0:23:07	Scanning project for duplicate elements
+16.10.2016 0:23:07	Finished duplicate element processing
+16.10.2016 0:23:07	In the script that you provided to the import operation, one or more statements were not fully understood. These statements were moved to the ScriptsIgnoredOnImport.sql file. Review the file contents for additional information.
+16.10.2016 0:23:07	A summary of the import was saved to the following location: C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Database\Import Script Logs\Create_sql_20161015092307.log
+16.10.2016 0:23:07	Click Finish to continue...

@@ -1,0 +1,9 @@
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Parser\obj\Debug\PrivateLibrary.Parser.csprojResolveAssemblyReference.cache
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Parser\bin\Debug\EpamTask.PrivateLibrary.Parser.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Parser\bin\Debug\EpamTask.PrivateLibrary.Parser.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Parser\obj\Debug\EpamTask.PrivateLibrary.Parser.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Parser\obj\Debug\EpamTask.PrivateLibrary.Parser.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Parser\bin\Debug\EpamTask.PrivateLibrary.Entity.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Parser\bin\Debug\EpamTask.PrivateLibrary.Repositories.dll
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Parser\bin\Debug\EpamTask.PrivateLibrary.Entity.pdb
+C:\Users\JHunter\Documents\Visual Studio 2015\Projects\PrivateLibrary\PrivateLibrary.Parser\bin\Debug\EpamTask.PrivateLibrary.Repositories.pdb

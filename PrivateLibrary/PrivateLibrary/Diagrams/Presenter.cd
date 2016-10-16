@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EpamTask.PrivateLibrary.RenewConfirmationWindow" BaseTypeListCollapsed="true">
+    <Position X="3" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAEAAAAACAAAAAAAAQAAAACA=</HashCode>
+      <FileName>Forms\RenewConfirmationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.SignUpForm" BaseTypeListCollapsed="true">
+    <Position X="3" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAgAAAAAEAACEAAAAACAA=</HashCode>
+      <FileName>Forms\SignUpForm.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.LibraryInstaller">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LibraryInstaller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.75" Width="2" />
+    <Members>
+      <Method Name="dataGridMain_SelectionChanged" Hidden="true" />
+      <Method Name="FillSearchList" Hidden="true" />
+      <Method Name="StatusTimeElapsed" Hidden="true" />
+      <Method Name="SwitchToGrid" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gCAgYAQgkeAAAAAAMQIAAEwAGA0IkAggAgSAKBAAIAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.Global.Encryptor">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Global\Encryptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.Forms.LoginForm" BaseTypeListCollapsed="true">
+    <Position X="3" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAASAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\LoginForm.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.Global.Container">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAAAAAgAAAAACBAAACAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Global\Container.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.InputValidation.EmailValidator">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Global\InputValidation\EmailValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.InputValidation.IntegerValidator">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Global\InputValidation\IntegerValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.InputValidation.ISBNValidator">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Global\InputValidation\ISBNValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.InputValidation.PhoneValidator">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Global\InputValidation\PhoneValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.InputValidation.StringValidator">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Global\InputValidation\StringValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EpamTask.PrivateLibrary.InputValidation.YearValidator">
+    <Position X="13.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Global\InputValidation\YearValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="EpamTask.PrivateLibrary.Global.TableType">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAABAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Global\Container.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
