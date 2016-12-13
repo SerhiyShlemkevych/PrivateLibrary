@@ -8,6 +8,7 @@ namespace EpamTask.PrivateLibrary.Repositories.Abstract.Repositories
 {
     public interface IBookLocationRepository : IGenericRepository<BookLocationEntity>
     {
-       IEnumerable<BookLocationEntity> GetAll(Func<SqlDataReader, BookLocationEntity> parser);
+        // Review IP: Consider moving this to base class as long as you have this method almost in all classes
+        IEnumerable<BookLocationEntity> GetAll(Func<SqlDataReader, BookLocationEntity> parser);
     }
 }

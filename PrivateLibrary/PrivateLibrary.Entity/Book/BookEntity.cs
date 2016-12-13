@@ -2,9 +2,11 @@
 {
     public class BookEntity : BaseEntity
     {
+        // Review IP: propery name should be Id (PascalCase)
         public new int ID { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
+        // Review IP: Maybe Genre? 
         public string Gendre { get; set; }
         public int Year { get; set; }
         public string ISBN { get; set; }

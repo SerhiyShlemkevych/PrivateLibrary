@@ -3,6 +3,7 @@ using System.Data;
 
 namespace EpamTask.PrivateLibrary.Repositories.SqlWrapper
 {
+    // Review IP: class name is not same as file name
     public static class ExtensionMethods
     {
         public static bool ColumnExists(this IDataRecord reader, string columnName)

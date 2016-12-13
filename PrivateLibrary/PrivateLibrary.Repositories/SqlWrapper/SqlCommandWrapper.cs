@@ -14,6 +14,7 @@ namespace EpamTask.PrivateLibrary.Repositories.SqlWrapper
             _connectionString = connectionString;
         }
 
+        // Review IP: method is generic so why you return object?
         public object ExecuteReader<T>(string spName, Func<SqlDataReader, T> callback = null)
         {
             using (var connection = new SqlConnection(_connectionString))

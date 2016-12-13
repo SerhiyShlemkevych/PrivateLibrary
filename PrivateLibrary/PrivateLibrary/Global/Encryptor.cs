@@ -3,6 +3,7 @@ using System.Text;
 
 namespace EpamTask.PrivateLibrary.Global
 {
+    // Review IP: create an interface and implement it
     public static class Encryptor
     {
         public static string HashToMD5(string text)

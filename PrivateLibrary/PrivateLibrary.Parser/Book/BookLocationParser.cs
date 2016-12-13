@@ -7,6 +7,10 @@ using EpamTask.PrivateLibrary.Repositories.SqlWrapper.EntityParameters;
 
 namespace EpamTask.PrivateLibrary.Parser.Book
 {
+    // Review IP: try not create static classes / singletons
+    // Review IP: FYI this singleton is not thread safe
+    // Review IP: consider creating interface and implementing it
+    // Review IP: cosider creating generic parser
     public class BookLocationParser
     {
         private static BookLocationParser _instance;

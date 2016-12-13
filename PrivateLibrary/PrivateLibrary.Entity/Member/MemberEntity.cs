@@ -9,6 +9,7 @@
         public string PhoneNumber { get; set; }
         public string Gender { get; set; }
         public string City { get; set; }
+        // Review IP: i would use DateTime here
         public string JoinDate { get; set; }
         public string SubscriptionStartDate { get; set; }
         public int CurrentBooks { get; set; }

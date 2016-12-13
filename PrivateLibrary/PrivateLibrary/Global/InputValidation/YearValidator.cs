@@ -8,6 +8,7 @@ namespace EpamTask.PrivateLibrary.InputValidation
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
+            // Review IP: there is a shortcut for this - string.IsNullOrEpty
             if (value == null || value.ToString() == string.Empty)
                 return new ValidationResult(false, "Value cannot be empty.");
 

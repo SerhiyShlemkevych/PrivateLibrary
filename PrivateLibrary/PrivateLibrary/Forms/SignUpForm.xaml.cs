@@ -61,6 +61,7 @@ namespace EpamTask.PrivateLibrary
                 }
                 var row = 0;
                 AddHeader(list[index].Name, row++, column);
+                // Review IP: use string format or string interpolation
                 AddLabel(list[index].MaxbookAmount + " books", row++, column);
                 AddLabel(list[index].MonthPlan + " months", row++, column);
                 AddLabel(list[index].PricePerMonth.ToString("C", new CultureInfo("en-US")), row++, column);

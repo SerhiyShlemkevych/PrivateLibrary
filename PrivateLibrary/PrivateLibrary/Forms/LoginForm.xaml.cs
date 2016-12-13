@@ -1,4 +1,4 @@
-﻿
+﻿// Review IP: remove unused namespaces
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls.Primitives;
@@ -18,6 +18,7 @@ namespace EpamTask.PrivateLibrary.Forms
             InitializeComponent();
         }
 
+        // Review IP: naming convention for methods (PascalCase without _)
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             var password = Encryptor.HashToMD5(passwordBox.Password);

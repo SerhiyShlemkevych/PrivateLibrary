@@ -19,6 +19,7 @@ namespace EpamTask.PrivateLibrary.Global
         public static IEnumerable<BorrowModel> BorrowList { get; set; }
         public static TableType CurrentTable { get; set; }
     }
+    // Review IP: move it to separate file
     internal enum TableType
     {
         Book,

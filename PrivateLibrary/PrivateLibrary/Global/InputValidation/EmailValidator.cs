@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
 
+// Review IP: you missed "Global" segment in namespace
 namespace EpamTask.PrivateLibrary.InputValidation
 {
     public class EmailValidator : ValidationRule
